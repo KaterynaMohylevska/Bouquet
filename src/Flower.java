@@ -1,7 +1,7 @@
 /**
  * Created by cs.ucu.edu.ua on 04.10.2016.
  */
-public class Flower {
+public abstract class Flower {
     double stemSize = 0;
 
     private double price = 0;
@@ -25,5 +25,7 @@ public class Flower {
     public void setColor(String color){
         this.color = color;
     }
+
+    public abstract boolean hasSpike();
 
 }

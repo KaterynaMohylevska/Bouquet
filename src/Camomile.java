@@ -8,5 +8,11 @@ public class Camomile extends Flower{
         this.setPrice(100);
         this.stemSize = stemSize;
         this.levelFresh = levelFresh;
+
+    }
+
+    @Override
+    public boolean hasSpike() {
+        return false;
     }
 }

@@ -8,4 +8,8 @@ public class Tulips extends Flower {
         this.setPrice(20);
         this.levelFresh = levelFresh;
     }
+    @Override
+    public boolean hasSpike() {
+        return true;
+    }
 }
