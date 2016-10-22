@@ -1,31 +1,56 @@
 /**
  * Created by cs.ucu.edu.ua on 04.10.2016.
  */
-public abstract class Flower {
-    double stemSize = 0;
+public class Flower {
 
-    private double price = 0;
 
-    private String color = "";
+    protected FlowerSpec spec;
 
-    double levelFresh = 0;
+    public Flower(FlowerSpec spec) {
+        this.spec = spec;
+    }
+
+
+    public String getType() { return spec.getType();}
+
+    public void setType(String type) { spec.setType(type);}
 
     public double getPrice() {
-        return price;
+        return spec.getPrice();
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        spec.setPrice(price);
     }
 
-    public String getColor(){
-        return color;
+    public FlowerColor getColor(){
+        return spec.getColor();
     }
 
-    public void setColor(String color){
-        this.color = color;
+    public void setColor(FlowerColor color){
+        spec.setColor(color);
     }
 
-    public abstract boolean hasSpike();
+    public double getLevelFresh() {
+        return spec.getLevelFresh();
+    }
+
+    public void setFresh(double levelFresh) {
+        spec.setFresh(levelFresh);
+    }
+
+    public double getStemSize() {
+        return spec.getStemSize();
+    }
+
+    public void setStemSize(double stemSize) {
+        spec.setStemSize(stemSize);
+    }
+
+    public String toString() {
+        return "Type: " + getType() + ", price is " + String.valueOf(getPrice())
+                + ", its color is " + getColor() + ", fresh level is " + String.valueOf(getLevelFresh())
+                + ", its stem size is " + String.valueOf(getStemSize());
+    }
 
 }
