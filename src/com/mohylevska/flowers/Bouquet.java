@@ -1,6 +1,6 @@
 package com.mohylevska.flowers;
 
-import com.mohylevska.orders.Item;
+import com.mohylevska.decorator.Item;
 
 /**
  * Created by cs.ucu.edu.ua on 04.10.2016.

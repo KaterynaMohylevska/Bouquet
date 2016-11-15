@@ -1,4 +1,4 @@
-package com.mohylevska.orders;
+package com.mohylevska.decorator;
 
 /**
  * Created by cs.ucu.edu.ua on 08.11.2016.
@@ -10,7 +10,7 @@ public class BasketDecorator extends ItemDecorator {
 
     @Override
     public double getPrice(){
-        System.out.println("+ basket");
+
         return 4 + item.getPrice();
     }
 }

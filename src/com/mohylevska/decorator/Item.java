@@ -1,4 +1,4 @@
-package com.mohylevska.orders;
+package com.mohylevska.decorator;
 
 import com.mohylevska.flowers.Flower;
 import com.mohylevska.flowers.FlowerSpec;

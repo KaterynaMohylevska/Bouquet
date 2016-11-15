@@ -1,12 +1,12 @@
 package com.mohylevska;
 
 import com.mohylevska.flowers.*;
-import com.mohylevska.orders.BasketDecorator;
-import com.mohylevska.orders.Item;
-import com.mohylevska.orders.PaperDecorator;
-import com.mohylevska.orders.RibbonDecorator;
-
-import java.util.Arrays;
+import com.mohylevska.decorator.BasketDecorator;
+import com.mohylevska.decorator.Item;
+import com.mohylevska.decorator.PaperDecorator;
+import com.mohylevska.decorator.RibbonDecorator;
+import com.mohylevska.strategy.CreditCartPaymentStrategy;
+import com.mohylevska.strategy.PostDeliveryStrategy;
 
 /**
  * Created by cs.ucu.edu.ua on 04.10.2016.
@@ -81,6 +81,20 @@ public class Main {
         System.out.println("\nAdditional to the bouquet:");
         Item item = new PaperDecorator(new BasketDecorator(new RibbonDecorator(bouquet)));
         System.out.println("\nPrice:");
+        System.out.println("+ basket");
+        System.out.println(" + paper");
+        System.out.println("+ ribbon");
         System.out.println(item.getPrice());
+
+        System.out.println("\nORDER!!");
+        Order order = new Order();
+        order.addItem(item);
+        System.out.println("Delivered by post");
+        order.setDelivery(new PostDeliveryStrategy());
+        System.out.println("Payed by a credit car");
+        order.setPayment(new CreditCartPaymentStrategy());
+        System.out.println("Total price: ");
+        System.out.println(order.calculateTotalPrice());
+
     }
 }
