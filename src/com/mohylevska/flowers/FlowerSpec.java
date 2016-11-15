@@ -1,12 +1,20 @@
+package com.mohylevska.flowers;
+
 /**
  * Created by cs.ucu.edu.ua on 18.10.2016.
  */
-public class FlowerSpec {
+public class FlowerSpec{
     protected FlowerColor color;
     protected double stemSize;
     protected double levelFresh;
     protected double price;
     protected String type;
+
+    public FlowerSpec(FlowerColor color, double price, double stemSize){
+        this.color = color;
+        this.price = price;
+        this.stemSize = stemSize;
+    }
 
     public String getType() {
         return type;

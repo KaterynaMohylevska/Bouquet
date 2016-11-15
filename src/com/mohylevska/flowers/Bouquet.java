@@ -1,12 +1,17 @@
+package com.mohylevska.flowers;
+
+import com.mohylevska.orders.Item;
+
 /**
  * Created by cs.ucu.edu.ua on 04.10.2016.
  */
-public class Bouquet{
+public class Bouquet<P> implements Comparable<Bouquet<P>>,Item {
     private int max = 17;
 
     private Flower[] flowers = new Flower[max];
 
     private int lastIndex = 0;
+
 
     public void addFlower(Flower newFlower){
 
@@ -23,6 +28,7 @@ public class Bouquet{
         lastIndex++;
 
     }
+
 
     public String getBouquet(){
         String bouq = "";
@@ -45,7 +51,8 @@ public class Bouquet{
         }
     }
 
-    public double bouquetPrice(){
+
+    public double getPrice(){
         double price = 0;
         for (int j = 0; j < lastIndex; j++){
             price += flowers[j].getPrice();
@@ -87,4 +94,8 @@ public class Bouquet{
         return newSearched;
     }
 
+    @Override
+    public int compareTo(Bouquet<P> o) {
+        return (int) (this.getPrice() - o.getPrice());
+    }
 }
