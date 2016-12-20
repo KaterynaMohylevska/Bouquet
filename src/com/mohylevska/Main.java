@@ -29,25 +29,25 @@ public class Main {
 
     public static void main(String[] args){
         Bouquet bouquet = new Bouquet();
-        FlowerSpec camomile3Spec = new FlowerSpec(FlowerColor.WHITE,20,1.8);
 
-        camomile3Spec.setType("Camomile");
+        FlowerSpec camomile3Spec = new FlowerSpec(FlowerColor.WHITE,20,1.8);
+        camomile3Spec.setType(FlowerType.CHAMOMILE);
         camomile3Spec.setFresh(7);
 
         FlowerSpec camomile2Spec = new FlowerSpec(FlowerColor.WHITE,20,1.8);
-        camomile2Spec.setType("Camomile");
+        camomile2Spec.setType(FlowerType.CHAMOMILE);
         camomile2Spec.setFresh(10);
 
         FlowerSpec camomile1Spec = new FlowerSpec(FlowerColor.WHITE, 25,1.7);
-        camomile1Spec.setType("Camomile");
+        camomile1Spec.setType(FlowerType.CHAMOMILE);
         camomile1Spec.setFresh(7);
 
         FlowerSpec tulip1Spec = new FlowerSpec(FlowerColor.PINK, 20,1.7);
-        tulip1Spec.setType("Tulip");
+        tulip1Spec.setType(FlowerType.TULIP);
         tulip1Spec.setFresh(9);
 
         FlowerSpec tulip2Spec = new FlowerSpec(FlowerColor.RED,15,2);
-        tulip2Spec.setType("Tulip");
+        tulip2Spec.setType(FlowerType.TULIP);
         tulip2Spec.setFresh(7);
 
         Flower camomile3 = new Flower(camomile3Spec);
@@ -67,7 +67,7 @@ public class Main {
         System.out.println("Sorted by fresh level bouquet: \n" + bouquet.getBouquet());
 
         FlowerSpec spec = new FlowerSpec(FlowerColor.GREEN,20,2);
-        spec.setType("Tulip");
+        spec.setType(FlowerType.TULIP);
         spec.setFresh(7);
 
         System.out.println("\nSearched: ");

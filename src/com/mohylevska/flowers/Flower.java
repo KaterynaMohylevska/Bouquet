@@ -13,9 +13,9 @@ public class Flower {
     }
 
 
-    public String getType() { return spec.getType();}
+    public FlowerType getType() { return spec.getType();}
 
-    public void setType(String type) { spec.setType(type);}
+    public void setType(FlowerType type) { spec.setType(type);}
 
     public double getPrice() {
         return spec.getPrice();

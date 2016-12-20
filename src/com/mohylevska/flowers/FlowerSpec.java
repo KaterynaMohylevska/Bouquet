@@ -8,7 +8,7 @@ public class FlowerSpec{
     protected double stemSize;
     protected double levelFresh;
     protected double price;
-    protected String type;
+    protected FlowerType type;
 
     public FlowerSpec(FlowerColor color, double price, double stemSize){
         this.color = color;
@@ -16,11 +16,11 @@ public class FlowerSpec{
         this.stemSize = stemSize;
     }
 
-    public String getType() {
+    public FlowerType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(FlowerType type) {
         this.type = type;
     }
     public void setColor(FlowerColor color) {
