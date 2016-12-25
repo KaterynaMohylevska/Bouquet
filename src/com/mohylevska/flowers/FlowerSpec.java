@@ -10,6 +10,12 @@ public class FlowerSpec{
     protected double price;
     protected FlowerType type;
 
+    /**
+     * Determine color, price and stemsize
+     * @param color of flower
+     * @param price of flower
+     * @param stemSize of flower
+     */
     public FlowerSpec(FlowerColor color, double price, double stemSize){
         this.color = color;
         this.price = price;

@@ -13,20 +13,6 @@ import com.mohylevska.strategy.PostDeliveryStrategy;
  */
 public class Main {
 
-
-    // FOR TUPLE
-/*    public static void main(String[] args){
-        Tuple<Integer, String>[] tpls = new Tuple[3];
-        tpls[0] = new Tuple<Integer, String>(10, "bla");
-        tpls[1] = new Tuple<Integer, String>(1, "blabla");
-        tpls[2] = new Tuple<Integer, String>(4, "rrrr");
-        System.out.println(Arrays.toString(tpls));
-        Arrays.sort(tpls);
-        System.out.println(Arrays.toString(tpls));
-
-    }*/
-
-
     public static void main(String[] args){
         Bouquet bouquet = new Bouquet();
 

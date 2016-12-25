@@ -12,7 +12,10 @@ public class Bouquet<P> implements Comparable<Bouquet<P>>,Item {
 
     private int lastIndex = 0;
 
-
+    /**
+     * add new flower to bouquet
+     * @param newFlower is new flower
+     */
     public void addFlower(Flower newFlower){
 
         if (max - 1 < lastIndex ){
@@ -29,7 +32,10 @@ public class Bouquet<P> implements Comparable<Bouquet<P>>,Item {
 
     }
 
-
+    /**
+     *
+     * @return all flowers in a bouquet
+     */
     public String getBouquet(){
         String bouq = "";
         for (int i = 0; i < lastIndex; i++){
@@ -37,6 +43,10 @@ public class Bouquet<P> implements Comparable<Bouquet<P>>,Item {
         }
         return bouq;
     }
+
+    /**
+     * Sort for fresh level
+     */
 
     public void sortLevelFresh(){
         for (int i = 1; i < lastIndex; i++){
@@ -51,7 +61,10 @@ public class Bouquet<P> implements Comparable<Bouquet<P>>,Item {
         }
     }
 
-
+    /**
+     *
+     * @return price of whole bouquet
+     */
     public double getPrice(){
         double price = 0;
         for (int j = 0; j < lastIndex; j++){
@@ -60,6 +73,11 @@ public class Bouquet<P> implements Comparable<Bouquet<P>>,Item {
         return price;
     }
 
+    /**
+     *
+     * @param spec is flower, that searched
+     * @return related flowers
+     */
     public Flower[] search(FlowerSpec spec){
         Flower[] searched = new Flower[lastIndex + 1];
         int index = 0;
@@ -94,6 +112,11 @@ public class Bouquet<P> implements Comparable<Bouquet<P>>,Item {
         return newSearched;
     }
 
+    /**
+     *
+     * @param o is Bouquet that compare
+     * @return differnces  between prices
+     */
     @Override
     public int compareTo(Bouquet<P> o) {
         return (int) (this.getPrice() - o.getPrice());

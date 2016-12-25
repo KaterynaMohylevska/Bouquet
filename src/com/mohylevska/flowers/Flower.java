@@ -4,10 +4,16 @@ package com.mohylevska.flowers;
  * Created by cs.ucu.edu.ua on 04.10.2016.
  */
 public class Flower {
-
+    /**
+     * Flower class
+     */
 
     protected FlowerSpec spec;
 
+    /**
+     *
+     * @param spec is FlowerSpec
+     */
     public Flower(FlowerSpec spec) {
         this.spec = spec;
     }

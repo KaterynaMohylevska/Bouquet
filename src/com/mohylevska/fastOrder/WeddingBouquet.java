@@ -6,6 +6,10 @@ import com.mohylevska.flowers.*;
  * Created by cs.ucu.edu.ua on 22.11.2016.
  */
 public class WeddingBouquet extends Bouquet{
+    /**
+     * Creating a special wedding bouquet
+     * @param size is a number of flower in the bouquet
+     */
     public WeddingBouquet(BouquetSize size){
             Bouquet bouquet = new Bouquet();
             for (int i = 0; i < size.getSize(); i++){

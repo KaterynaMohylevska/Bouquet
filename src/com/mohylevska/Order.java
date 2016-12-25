@@ -13,6 +13,10 @@ public class Order {
     protected IPayment payment;
     protected IDelivery delivery;
 
+    /**
+     *
+     * @return way of pay and if that was payed
+     */
     public IPayment getPayment() {
         return payment;
     }
@@ -24,16 +28,29 @@ public class Order {
         }
     }
 
+    /**
+     *
+     * @return way of delivery and if that was delivered
+     */
     public IDelivery getDelivery() {
         return delivery;
     }
 
+    /**
+     * set delivery type and delivered
+     * @param delivery is type of delivery
+     */
     public void setDelivery(IDelivery delivery) {
         this.delivery = delivery;
         for (Item item : items) {
             delivery.deliver(item);
         }
     }
+
+    /**
+     * Calculate price with delivery
+     * @return price
+     */
 
     public double calculateTotalPrice() {
         int totalPrice = 0;
@@ -48,10 +65,19 @@ public class Order {
 
         return totalPrice;
     }
-    public void addItem(Item items) {
-        this.items.add(items);
+
+    /**
+     * Add item to order
+     * @param item
+     */
+    public void addItem(Item item) {
+        this.items.add(item);
     }
 
+    /**
+     * Remove item
+     * @param item
+     */
     public void removeItem(Item item) {
         this.items.remove(item);
     }

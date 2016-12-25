@@ -8,6 +8,10 @@ public class BasketDecorator extends ItemDecorator {
         super(it);
     }
 
+    /**
+     * Add 4 dollars for basket
+     * @return price
+     */
     @Override
     public double getPrice(){
 

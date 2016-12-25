@@ -10,6 +10,10 @@ public class RibbonDecorator extends ItemDecorator {
     public RibbonDecorator(Item it) {
         super(it);
     }
+    /**
+     * Add 40 dollars for ribbon
+     * @return price
+     */
     public double getPrice(){
         return 40 + item.getPrice();
     }
